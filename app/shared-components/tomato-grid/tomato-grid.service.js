@@ -27,11 +27,12 @@
         function filterDataFromSearch(data, searchVal) {
             return _.filter(data, function(data) {
                 return (
-                data.Season === searchVal || 
-                data.Color === searchVal ||
-                data.Cost === searchVal ||
-                data.Ounces === searchVal ||
-                data.Picked === searchVal);
+                searchVal === '' ||
+                data.Season.toLowerCase().indexOf(searchVal) != -1 || 
+                data.Color.toLowerCase().indexOf(searchVal) != -1 ||
+                data.Cost.toLowerCase().indexOf(searchVal) != -1 ||
+                data.Ounces.toLowerCase().indexOf(searchVal) != -1 ||
+                data.Picked.toLowerCase().indexOf(searchVal) != -1);
             });
         }
     }
