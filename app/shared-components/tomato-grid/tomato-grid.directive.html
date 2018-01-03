@@ -13,11 +13,11 @@
     </table>
     <table class="table table--border-radius table--body-background margin--none"> 
         <thead class="table--header-background">
-        
+                <input class="form-control" type="text" ng-model="vm.search" ng-change="vm.filterGrid()">
           <tr class="table-directive--header-row-height">
             <th ng-repeat="columnName in vm.gridcolumns" >
                 {{::columnName}}
-            </th
+            </th>
           </tr>
         </thead>
         <tbody id="grid-body">

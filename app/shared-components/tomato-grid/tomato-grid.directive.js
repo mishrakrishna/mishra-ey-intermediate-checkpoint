@@ -21,7 +21,7 @@
         return directive;
     }
  
-    TomatoGridController.$inject = ['tomatoGridService'];
+    TomatoGridController.$inject = ['tomatoGridService', 'restService'];
  
     function TomatoGridController(tomatoGridService) {
         var vm = this;

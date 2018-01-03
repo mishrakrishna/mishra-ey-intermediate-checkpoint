@@ -40,7 +40,11 @@
                 select="vm.setActiveTabIndex($index, tabData.Title)"
               />
           </uib-tabset>
-          <tomato-grid data="vm.tomatoes"></tomato-grid>
+          <tomato-grid 
+          data="vm.tomatoes"
+          list-view="vm.activeTabTitle"
+          >
+        </tomato-grid>
           <!-- <tomato-grid 
                 data="vm.tomatoes"
                 list-view="vm.activeTabTitle"
