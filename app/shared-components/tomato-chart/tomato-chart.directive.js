@@ -34,6 +34,12 @@
             vm.horizontalAxisLabel, vm.verticalAxisLabel, 
             vm.displayLegend
         );
+
+        vm.lineChartData = tomatoChartService.getLineChartData(vm.data);
+        vm.lineChartOptions = tomatoChartService.getChartOptions(
+            vm.horizontalAxisLabel, vm.verticalAxisLabel, 
+            vm.displayLegend
+        );
     }
  })();
  

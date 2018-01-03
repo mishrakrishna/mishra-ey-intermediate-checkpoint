@@ -85,6 +85,16 @@ h1 {
 	font-weight: bold;
 }
 
+.tomato-navigation__img {
+	width: 30px;
+	height: 30px;
+}
+
+.navbar-brand{
+	height: 60px;
+	line-height: 30px;
+}
+
 /*************************************** 
  * Tomato Card 
  **************************************/

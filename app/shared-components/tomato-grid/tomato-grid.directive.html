@@ -1,1 +1,45 @@
-<!-- Add tomato grid here -->
+<div>
+    <table>
+        <tr>      
+        <td><div class="pull-right">
+            <b> Search: </b>
+        </div>
+        </td>
+        <td><div class="pull-right">
+        <input class="form-control" type="text" ng-model="vm.search" ng-change="vm.filterGrid()">
+        </div>
+        </td>
+        </tr>
+    </table>
+    <table class="table table--border-radius table--body-background margin--none"> 
+        <thead class="table--header-background">
+        
+          <tr class="table-directive--header-row-height">
+            <th ng-repeat="columnName in vm.gridcolumns" >
+                {{::columnName}}
+            </th
+          </tr>
+        </thead>
+        <tbody id="grid-body">
+          <tr ng-repeat="rowData in vm.gridData | itemsPerPage: 15" pagination-id="vm.listView">
+              <td>
+                {{::rowData.Color}}
+              </td>
+              <td>
+                  {{::rowData.Cost}}
+              </td>
+              <td>
+                  {{::rowData.Ounces}}
+              </td>
+              <td>
+                  {{::rowData.Picked}}
+              </td>
+              <td>
+                  {{::rowData.Season}}
+              </td>
+          </tr>
+        </tbody>
+    </table>
+    <dir-pagination-controls boundary-links="true" direction-links="true" pagination-id="vm.listView">
+    </dir-pagination-controls>
+</div>

@@ -16,9 +16,34 @@
             />
         </div>
         <div class="col-xs-12 col-sm-6">
-            <!-- Add tomato chart directive -->
+                <tomato-chart
+                  ng-if="!vm.loading" 
+                  data="vm.tomatoes" 
+                  type="Line" 
+                  header="Tomato Revenue by Season"
+                  horizontal-axis-label="Seasons"
+                  vertical-axis-label="Revenue"
+                />
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <!-- <tomato-tabs 
+            ng-if="!vm.loading"
+            tabsdata="vm.farms"
+          /> -->
+          <uib-tabset active="0">
+              <uib-tab
+                index="$index"
+                ng-repeat="tabData in vm.farms track by $index"
+                heading="{{tabData.Title}}"
+                select="vm.setActiveTabIndex($index, tabData.Title)"
+              />
+          </uib-tabset>
+          <tomato-grid 
+                data="vm.tomatoes"
+                list-view="vm.activeTabTitle"
+          />
         </div>
     </div>
 </section>
-
-<!-- Add tomato grid directive -->

@@ -16,6 +16,7 @@
         vm.farms = [];
         vm.filter = '';
         vm.activeTabIndex = 0;
+        vm.activeTabTitle ='';
         vm.setActiveTabIndex = setActiveTabIndex;
         
         activate();
@@ -34,8 +35,10 @@
             }
         }
 
-        function setActiveTabIndex(index) {
+        function setActiveTabIndex(index, selectedTitle) {
             vm.activeTabIndex = index;
+            vm.activeTabTitle = selectedTitle;
+            console.log(selectedTitle);
         }
 
         function getTomatoes() {
